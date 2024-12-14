@@ -20,3 +20,5 @@ Is it generating documentation?
 CLOSED: [2024-12-14 Sat 00:17]
 
 If a file is symbolic then ~stat()~ does not resolve it; the file size is the symbolic link path size.
+
+** TODO Replace CMake platform logic with CPP logic
