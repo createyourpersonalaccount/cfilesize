@@ -17,5 +17,6 @@ if(UNIX)
     PRIVATE "${CMAKE_SOURCE_DIR}/include"
   )
   target_link_libraries(cfilesize $<TARGET_OBJECTS:cfilesize_unix>)
+  target_compile_definitions(cfilesize PRIVATE UNIX)
 elseif(WIN32)
 endif()
