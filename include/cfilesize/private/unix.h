@@ -1,5 +1,5 @@
-#ifndef CFILESIZE_UNIX_H_
-#define CFILESIZE_UNIX_H_
+#ifndef CFILESIZE_PRIVATE_UNIX_H_
+#define CFILESIZE_PRIVATE_UNIX_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -13,4 +13,4 @@ off_t cfilesize_unix(const char *filename, int *error);
 }
 #endif /* __cplusplus */
 
-#endif /* CFILESIZE_UNIX_H_ */
+#endif /* CFILESIZE_PRIVATE_UNIX_H_ */
