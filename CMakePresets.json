@@ -1,0 +1,103 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 24,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "Debug Config",
+      "description": "Debug build using Ninja generator",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/debug",
+      "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "Debug",
+          "BUILD_TESTING": "ON",
+          "BUILD_DOCS": "ON",
+          "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+          "CMAKE_C_STANDARD": "90",
+          "CMAKE_C_FLAGS": "-fsanitize=address",
+          "CMAKE_CXX_STANDARD": "17",
+          "CMAKE_CXX_FLAGS": "-fsanitize=address"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release Config",
+      "description": "Release build using Ninja generator",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release",
+      "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "Release",
+          "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+          "CMAKE_C_STANDARD": "89"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "default",
+      "configurePreset": "default"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "default",
+      "configurePreset": "default",
+      "output": {"outputOnFailure": true},
+      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+    }
+  ],
+  "packagePresets": [
+    {
+      "name": "default",
+      "configurePreset": "default",
+      "generators": [
+        "TGZ",
+        "ZIP"  
+      ]
+    }
+  ],
+  "workflowPresets": [
+    {
+      "name": "default",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "default"
+        },
+        {
+          "type": "build",
+          "name": "default"
+        },
+        {
+          "type": "test",
+          "name": "default"
+        },
+        {
+          "type": "package",
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "debug",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "default"
+        },
+        {
+          "type": "build",
+          "name": "default"
+        },
+        {
+          "type": "test",
+          "name": "default"
+        }
+      ]
+    }
+  ]
+}

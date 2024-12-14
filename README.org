@@ -1,0 +1,15 @@
+* cfilesize
+
+** TODO Add ~install()~ commands for CPack to work correctly
+
+** TODO Modify the preset workflows to have debug, release, etc, specified
+
+Fix them so that debug, release, default, and so on are meaningful. Maybe add ~package~.
+
+** TODO Do I need to remove -Linux from CPack archives?
+
+Use ~CPACK_PACKAGE_FILE_NAME~ for this. Shouldn't the package be portable?
+
+** TODO Fix Doxygen
+
+Is it generating documentation?
