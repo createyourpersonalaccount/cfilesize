@@ -15,3 +15,7 @@ Use ~CPACK_PACKAGE_FILE_NAME~ for this. Shouldn't the package be portable?
 Is it generating documentation?
 
 ** TODO Include large files
+
+** TODO Fix symbolic links
+
+If a file is symbolic then ~stat()~ does not resolve it; the file size is the symbolic link path size.
