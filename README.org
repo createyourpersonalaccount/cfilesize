@@ -16,6 +16,7 @@ Is it generating documentation?
 
 ** TODO Include large files
 
-** TODO Fix symbolic links
+** DONE Fix symbolic links
+CLOSED: [2024-12-14 Sat 00:17]
 
 If a file is symbolic then ~stat()~ does not resolve it; the file size is the symbolic link path size.
