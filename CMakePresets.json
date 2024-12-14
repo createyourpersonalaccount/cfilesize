@@ -13,14 +13,14 @@
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/debug",
       "cacheVariables": {
-          "CMAKE_BUILD_TYPE": "Debug",
-          "BUILD_TESTING": "ON",
-          "BUILD_DOCS": "ON",
-          "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
-          "CMAKE_C_STANDARD": "90",
-          "CMAKE_C_FLAGS": "-fsanitize=address",
-          "CMAKE_CXX_STANDARD": "17",
-          "CMAKE_CXX_FLAGS": "-fsanitize=address"
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BUILD_TESTING": "ON",
+        "BUILD_DOCS": "ON",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_C_STANDARD": "90",
+        "CMAKE_C_FLAGS": "-fsanitize=address",
+        "CMAKE_CXX_STANDARD": "17",
+        "CMAKE_CXX_FLAGS": "-fsanitize=address"
       }
     },
     {
@@ -30,9 +30,9 @@
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/release",
       "cacheVariables": {
-          "CMAKE_BUILD_TYPE": "Release",
-          "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
-          "CMAKE_C_STANDARD": "89"
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_C_STANDARD": "89"
       }
     }
   ],
@@ -46,8 +46,13 @@
     {
       "name": "default",
       "configurePreset": "default",
-      "output": {"outputOnFailure": true},
-      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error",
+        "stopOnFailure": true
+      }
     }
   ],
   "packagePresets": [
@@ -56,7 +61,7 @@
       "configurePreset": "default",
       "generators": [
         "TGZ",
-        "ZIP"  
+        "ZIP"
       ]
     }
   ],
