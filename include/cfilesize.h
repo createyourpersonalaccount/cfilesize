@@ -7,7 +7,7 @@ extern "C" {
 
 #include <sys/types.h>
 
-unsigned long cfilesize(const char *filename);
+unsigned long cfilesize(const char *filename, int *error);
 
 #ifdef __cplusplus
 }

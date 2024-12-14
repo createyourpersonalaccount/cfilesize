@@ -7,7 +7,7 @@ extern "C" {
 
 #include <sys/types.h>
 
-off_t cfilesize_unix(const char *filename);
+off_t cfilesize_unix(const char *filename, int *error);
 
 #ifdef __cplusplus
 }
